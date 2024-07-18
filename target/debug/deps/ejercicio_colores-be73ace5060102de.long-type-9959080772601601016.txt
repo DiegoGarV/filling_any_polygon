@@ -1,0 +1,1 @@
+fn(_, _, _) -> nalgebra::base::matrix::Matrix<_, nalgebra::base::dimension::Const<3>, nalgebra::base::dimension::Const<1>, nalgebra::base::array_storage::ArrayStorage<_, 3, 1>> {vec3::<_>}
