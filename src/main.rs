@@ -14,6 +14,7 @@ fn main() {
     let outline_color = Color::from_hex("white", 0xFFFFFF);
     let fill_color_p1 = Color::from_hex("yellow", 0xFFFF00);
     let fill_color_p2 = Color::from_hex("blue", 0x0000FF);
+    let fill_color_p3 = Color::from_hex("red", 0xFF0000);
 
     framebuffer.set_background_color(bg_color.clone());
     framebuffer.clear();
@@ -41,6 +42,14 @@ fn main() {
         vec3(374.0, 302.0, 0.0),
     ];
     framebuffer.draw_polygon(&polygon2, &outline_color, &fill_color_p2);
+
+    // Tercer polígono
+    let polygon3 = vec![
+        vec3(377.0, 249.0, 0.0),
+        vec3(411.0, 197.0, 0.0),
+        vec3(436.0, 249.0, 0.0),
+    ];
+    framebuffer.draw_polygon(&polygon3, &outline_color, &fill_color_p3);
 
     // Crea el bitmap
     framebuffer.render_buffer("out.bmp").expect("Error al renderizar el buffer a BMP");
